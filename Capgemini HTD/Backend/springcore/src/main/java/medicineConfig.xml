@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- For MedicineBean -->
+<!-- for list -->
+	<!-- <bean id="medicine"
+		class="com.capgemini.springcore.annotation.bean.Medicine">
+		<property name="name" value="corcine"></property>
+		<property name="price" value="50.56"></property>
+		<property name="type" value="Allopathic"></property>
+		<property name="drugs">
+			<list>
+				<value>Abc1</value>
+				<value>paracetamol</value>
+				<value>Xyz2</value>
+			</list>
+		</property>
+
+	</bean> -->
+	
+	
+<!-- for set -->
+	 <bean id="medicine"
+		class="com.capgemini.springcore.annotation.bean.Medicine">
+		<property name="name" value="corcine"></property>
+		<property name="price" value="50.26"></property>
+		<property name="type" value="Allopathic"></property>
+		<property name="drugsSet">
+			<set>
+				<value>Hydrofluro</value>
+				<value>paracetamol</value>
+				<value>Xyz2</value>
+			</set>
+		</property>
+
+	</bean>
+</beans>

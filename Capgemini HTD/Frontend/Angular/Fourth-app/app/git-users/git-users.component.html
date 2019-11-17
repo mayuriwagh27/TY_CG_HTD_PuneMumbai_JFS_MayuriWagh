@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>URL</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let user of gitUsers; index as i'>
+                <td>{{i+1}}</td>
+                <td>{{user.id}}</td>
+                <td>{{user.login}}</td>
+                <td>
+                    <img [src]="user.avatar_url" alt=""
+                    width="200px" height="200px" alt="User Image">
+                </td>
+<td>{{user.url}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

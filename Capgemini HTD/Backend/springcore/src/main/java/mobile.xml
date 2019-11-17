@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- To get details of MobileDisplay into Mobile using "ByType" -->
+
+ <!--  <bean id="mobile" class="com.capgemini.springcore.beans.MobileBean" autowire="byType">
+  <property name="brandName" value="Samsung"/>
+    <property name="modelname" value="M10"/>
+    <property name="price" value="8500"/>
+   </bean> -->
+   
+   <!-- To get details of MobileDisplay into Mobile using "ByName" -->
+   
+ <!--  <bean id="mobile" class="com.capgemini.springcore.beans.MobileBean" autowire="byName">
+  <property name="brandName" value="Samsung"/>
+    <property name="modelname" value="M10"/>
+    <property name="price" value="8500"/>
+   </bean> -->
+   
+      
+      
+      <!-- To get details of MobileDisplay into Mobile using "ref" -->
+      
+   <bean id="mobile" class="com.capgemini.springcore.beans.MobileBean">
+  <property name="brandName" value="Samsung"/>
+    <property name="modelname" value="M10"/>
+    <property name="price" value="8500"/>
+        <property name="display" ref="mobileBean"/>
+    
+   </bean> 
+   
+   
+  
+<!--   Variables from MobileDisplay class--> 
+   <bean id="mobileBean" class="com.capgemini.springcore.beans.MobileDislpayBean">
+  <property name="displaysize" value="5"/>
+    <property name="resolution" value="300"/>
+   </bean>
+</beans>

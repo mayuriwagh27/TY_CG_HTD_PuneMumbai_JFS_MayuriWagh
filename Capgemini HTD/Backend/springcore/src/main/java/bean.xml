@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- For MessageBean -->
+
+<!-- <bean id="messageBean" class="com.capgemini.springcore.beans.MessageBean">  Qualified class path
+<property name="message" value="Welcome to Spring"></property>
+</bean>
+ -->
+
+<!-- 2nd method of initialization & destroy -->
+<bean class="com.capgemini.springcore.postprocessor.MyBeanProcessor"/>  <!-- To perform before & after Initialization -->
+<bean class="com.capgemini.springcore.postprocessor.MyBeanFactoryPostProcessor"/><!--To perform before Instantiation  -->
+<bean id="messageBean2" class="com.capgemini.springcore.beans.MessageBean2" init-method="init" destroy-method="destroy">  
+ 
+<property name="message" value="Happy Childrens day......"></property>
+</bean>
+
+
+
+  <!--For EmployeeBean -->
+
+<!-- <bean id="employee" class="com.capgemini.springcore.beans.EmployeeBean">  Qualified class path
+<property name="empId" value="101"></property>
+<property name="empName" value="Mayuri"></property>
+</bean>
+
+<bean id="employee1" class="com.capgemini.springcore.beans.EmployeeBean">  Qualified class path
+<property name="empId" value="102"></property>
+<property name="empName" value="Sakshi"></property>
+</bean> -->
+
+
+
+</beans>

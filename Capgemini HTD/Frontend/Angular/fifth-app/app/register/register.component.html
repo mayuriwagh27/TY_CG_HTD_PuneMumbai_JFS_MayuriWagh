@@ -1,0 +1,17 @@
+<div class="col-md-4 offset-md-4 mt-5">
+    <form #registerForm="ngForm" (ngSubmit)="registerUser(registerForm)">
+        <h4>Register</h4>
+        <div class="alert alert-danger" *ngIf = 'error'>
+            {{error}}
+        </div>
+
+        <input type="email" name="email" placeholder="Enter email..." #email='ngModel' ngModel
+            class="form-control mb-3">
+        <input type="password" name="password" placeholder="Enter password..." #email='ngModel' ngModel
+            class="form-control">
+        <br>
+        <button type="submit" class="btn btn-outline-primary float-right">Submit</button>
+
+
+    </form>
+</div>

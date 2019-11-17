@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- to display employee details -->
+
+<!-- <bean id="employee" class="com.capgemini.springcore.beans.EmployeeBean" scope="prototype"> prototype used to create different objects
+</bean>
+ -->
+
+<!-- to display details from both emp & dept -->
+
+<bean id="employee" class="com.capgemini.springcore.beans.EmployeeDeptBean" autowire="byType"> 
+<property name= "empId" value="101" />
+<property name= "empName" value="Mayuri" />
+<!-- <property name= "deptBean" ref="department" /> -->
+</bean>
+
+  <bean id="Analyst" class="com.capgemini.springcore.beans.DepartmentBean" primary="true" >
+<property name= "deptId" value="1" />
+<property name= "deptName" value="Analyst" />
+</bean>
+
+<bean id="Dev" class="com.capgemini.springcore.beans.DepartmentBean"> 
+<property name= "deptId" value="2" />
+<property name= "deptName" value="Developer" />
+</bean>
+
+<bean id="sd" class="com.capgemini.springcore.beans.DepartmentBean" autowire-candidate="false"> 
+<property name= "deptId" value="3" />
+<property name= "deptName" value="Sd" />
+</bean>
+</beans>

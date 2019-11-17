@@ -1,0 +1,9 @@
+<div class="col-md-3 float-left force-overflow">
+        <div class="card card-body" *ngFor='let car of cars'>
+            <img [src]="car.imgURL" class="card-img-top"
+            (click)='selectCar(car)' alt="">
+            <h4 class="text-center">{{car.brand}}</h4>
+        </div>
+        </div>
+             <app-car-details [car] ='selectedCar'></app-car-details>  <!--car-details is child component -->
+        

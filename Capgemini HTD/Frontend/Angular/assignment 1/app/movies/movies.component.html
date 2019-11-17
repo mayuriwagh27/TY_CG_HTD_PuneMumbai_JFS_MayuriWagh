@@ -1,0 +1,8 @@
+<div class="col-md-3 float-left force-overflow">
+        <div class="card card-body" *ngFor='let movie of movies'>
+            <img [src]="movie.imgURL" class="card-img-top"
+            (click)='selectMovie(movie)' alt="">
+            <h5 class="text-center">{{movie.name}}</h5>
+        </div>
+        </div>
+             <app-movie-details [movie] ='selectedMovie'></app-movie-details>  <!--movie-details is child component -->

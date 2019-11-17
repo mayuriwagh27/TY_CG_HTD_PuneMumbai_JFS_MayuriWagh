@@ -1,0 +1,17 @@
+ #grad{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(red,black,blue,cyan,purple,green,white,yellow);
+} 
+
+ #grad1{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, red,black,blue,cyan,purple,green,white,yellow);
+} 
+
+#grad2{
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(red,black,blue,cyan,purple,green,white,yellow);
+}

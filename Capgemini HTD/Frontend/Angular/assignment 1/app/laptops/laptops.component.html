@@ -1,0 +1,10 @@
+<div class="col-md-3 float-left force-overflow">
+    <div class="card card-body" *ngFor='let laptop of laptops'>
+        <img [src]="laptop.imgURL" class="card-img-top"
+        (click)='selectLaptop(laptop)' alt="">
+        <h5 class="text-center">{{laptop.brand}}</h5>
+    </div>
+    </div>
+         <app-laptop-details [laptop] ='selectedLaptop'></app-laptop-details>  <!--laptop-details is child component -->
+    
+

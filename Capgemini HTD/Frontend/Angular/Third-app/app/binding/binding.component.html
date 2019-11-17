@@ -1,0 +1,32 @@
+ 
+ <!-- One way data binding -->
+ <h1 [style.background]='flag ? "green" : "red"'>{{name}}</h1>      <!--style binding -->
+
+<h1>{{12+12}}</h1>                                <!--perform the operation -->
+
+<h1 [class.text-primary]='flag'
+  [class.bg-danger]='flag'>class Binding</h1>            <!--class binding -->
+
+ <img [src]="imgURL" alt=""><br>        <!-- property binding -->
+
+ <img src="{{imgURL}}" alt="">             <!--Interpolation -->
+
+  <input type="text" #myInput>               <!--Template reference variable -->
+
+<button class="btn btn-primary"(click)='eventOccured(myInput)'>         <!--event binding -->
+     Click me
+ </button>
+
+ <!-- Two way data binding -->
+<input type="text" [(ngModel)]='inputdata'>
+<h1>{{inputData}}</h1>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+<div class="col-md-3 float-left force-overflow">
+    <div class="card card-body" *ngFor='let mobile of mobiles'>
+        <img [src]="mobile.imgURL" class="card-img-top"
+        (click)='selectMobile(mobile)' alt="">
+        <h5 class="text-center">{{mobile.brand}}</h5>
+    </div>
+</div>
+         <app-mobile-details [mobile] ='selectedMobile'></app-mobile-details>  <!--mobile-details is child component -->
+       
